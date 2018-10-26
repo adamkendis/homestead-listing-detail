@@ -8,10 +8,23 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon server/index.js --watch",
+    "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "wp-build": "webpack --watch"
   },
   "dependencies": {
+    "express": "^4.16.4"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
