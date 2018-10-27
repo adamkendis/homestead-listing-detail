@@ -10,10 +10,14 @@
   "scripts": {
     "start": "nodemon server/index.js --watch",
     "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "wp-build": "webpack --watch"
+    "wp-build": "webpack --watch",
+    "seed": "knex seed:run"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "knex": "^0.15.2",
+    "pg": "^7.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

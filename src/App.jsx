@@ -8,7 +8,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>HOORAY FOR WEBPACK!!</div>
+      <div>App Component</div>
     )
   }
 }
