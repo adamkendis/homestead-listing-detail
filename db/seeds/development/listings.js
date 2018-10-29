@@ -14,8 +14,8 @@ faker.random.array = function randomNumsArray(min, max) {
 let createRecord = (knex, id) => {
   return knex('listings').insert({
     id,
-    type: faker.lorem.sentence({num: 2}),
-    title: faker.lorem.sentence({num: 7}),
+    type: faker.lorem.sentence(),
+    title: faker.lorem.sentence(),
     city: faker.address.city(),
     numGuests: faker.random.number({ min: 1, max: 4}),
     numRooms: faker.random.number({ min: 1, max: 4}),
