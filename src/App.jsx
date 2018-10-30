@@ -4,20 +4,24 @@ const $ = require('jquery');
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      listing: undefined
+    };
   }
 
   componentDidMount() {
-    this.testGet();
+    this.getListing();
   }
 
-  testGet() {
+  getListing() {
     $.ajax({
-      url: '/listing-details',
+      url: '/listing-details/7',
       type: 'GET',
       contentType: 'application/json',
-      success: () => {
-        console.log('Client: successful get request')
+      success: (listing) => {
+        this.setState({
+          listing: listing
+        })
       }
     });
   }
