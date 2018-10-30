@@ -6,7 +6,8 @@ let port = 3000;
 app.use(express.static('dist'));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
+app.get('/listing-details', (req, res) => {
+  console.log('test GET request');
   res.send();
 })
 
