@@ -77,6 +77,13 @@ class App extends React.Component {
             <div>Show all 35 amenities</div>
           </div>
 
+          <div style={{borderBottom: "1px solid black"}}>
+            <h5>Sleeping Arrangements</h5>
+
+            <div><bold>Bedroom 1</bold></div>
+            <div>1 queen bed</div>
+          </div>
+
         </div>
       </div>
     )
