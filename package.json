@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "Homestead - Listing Details module",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "Adam Kendis",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
@@ -11,23 +11,34 @@
     "start": "nodemon server/index.js --watch",
     "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "wp-build": "webpack --watch",
-    "seed": "knex seed:run"
+    "seed": "knex migrate:latest && knex seed:run",
+    "test": "jest --coverage --watch --config ./test/jest.config.js"
   },
   "dependencies": {
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "jquery": "^3.3.1",
     "knex": "^0.15.2",
-    "pg": "^7.6.0"
+    "pg": "^7.6.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
