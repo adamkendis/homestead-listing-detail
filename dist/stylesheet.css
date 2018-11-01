@@ -27,8 +27,27 @@
     font-weight: 300;
 }
 
+.listing-det-top-container {
+    position: relative;
+    width: 500px;
+}
+
+.listing-det-top-wrapper1 {
+    display: inline-block;
+    position: relative;
+    width: 83.33333333333334%;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+.listing-det-top-wrapper2 {
+    display: inline-block;
+    position: relative;
+    width: 16.666666666666664%;
+}
+
 .listing-det-nums {
-    margin: 15px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
 }
 
 .listing-det-nums > span {
@@ -46,7 +65,19 @@
 }
 
 .listing-det-host-img {
+    display: block;
     border-radius: 50%;
     height: 55px;
     width: 55px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.listing-det-host-name {
+    color: rgb(118, 118, 118);;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    text-align: center;
+    margin-left: 20px;
 }

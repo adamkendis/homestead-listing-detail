@@ -15,7 +15,7 @@ class App extends React.Component {
 
   getListing() {
     $.ajax({
-      url: '/listing-details/9',
+      url: '/listing-details/6',
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
@@ -31,17 +31,16 @@ class App extends React.Component {
       const listing = this.state.listing;
       return (
         <div>
-          <div>
-            <span style={{float: "right", marginRight: "25px"}}>
-              <img className='listing-det-host-img' src={listing.hostImg}/>
-              <div className='listing-det-host-name'>{listing.hostName}</div>
-            </span>
-            <span>
+          <div className='listing-det-top-container'>
+            <div className='listing-det-top-wrapper1'>
               <span className='listing-det-type' >{listing.type}</span>
               <h3 className='listing-det-title' >{listing.title}</h3>
-            </span>
-            <span className='listing-det-city'>{listing.city}</span>
-
+              <span className='listing-det-city'>{listing.city}</span>
+            </div>
+            <div className='listing-det-top-wrapper2'>
+              <img className='listing-det-host-img' src={listing.hostImg}/>
+              <div className='listing-det-host-name'>{listing.hostName}</div>
+            </div>
           </div>
 
           <div className='listing-det-nums'>
