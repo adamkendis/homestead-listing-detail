@@ -15,7 +15,7 @@ class App extends React.Component {
 
   getListing() {
     $.ajax({
-      url: '/listing-details/8',
+      url: '/listing-details/9',
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
@@ -32,23 +32,23 @@ class App extends React.Component {
       return (
         <div>
           <div>
-            <span style={{float: "right"}}>
-              <img className='listing-det-host-img' style={{height: "55px", width: "55px"}} src={listing.hostImg}/>
+            <span style={{float: "right", marginRight: "25px"}}>
+              <img className='listing-det-host-img' src={listing.hostImg}/>
               <div className='listing-det-host-name'>{listing.hostName}</div>
             </span>
             <span>
-              <span className='listing-det-type' style={{color: "#62564b"}}>{listing.type}</span>
+              <span className='listing-det-type' >{listing.type}</span>
               <h3 className='listing-det-title' >{listing.title}</h3>
             </span>
             <span className='listing-det-city'>{listing.city}</span>
 
           </div>
 
-          <div>
-            <span className='listing-det-numguests'><i class="fas fa-users"></i> {listing.numGuests} { listing.numGuests > 1 ? 'guests' : 'guest'}  </span>
-            <span className='listing-det-numrooms'><i class="fas fa-door-open"></i> {listing.numRooms} { listing.numRooms > 1 ? 'bedrooms' : 'bedroom'}  </span>
-            <span className='listing-det-numbeds'><i class="glyphicon glyphicon-bed"></i> {listing.numBeds} { listing.numBeds > 1 ? 'beds' : 'bed'}  </span>
-            <span className='listing-det-numbaths'><i class="fas fa-bath"></i> {listing.numBaths} { listing.numBaths > 1 ? 'baths' : 'bath'}  </span>
+          <div className='listing-det-nums'>
+            <i class="fas fa-users"></i><span className='listing-det-numguests'> {listing.numGuests} { listing.numGuests > 1 ? 'guests' : 'guest'}  </span>
+            <i class="fas fa-door-open"></i><span className='listing-det-numrooms'> {listing.numRooms} { listing.numRooms > 1 ? 'bedrooms' : 'bedroom'}  </span>
+            <i class="glyphicon glyphicon-bed"></i><span className='listing-det-numbeds'> {listing.numBeds} { listing.numBeds > 1 ? 'beds' : 'bed'}  </span>
+            <i class="fas fa-bath"></i><span className='listing-det-numbaths'> {listing.numBaths} { listing.numBaths > 1 ? 'baths' : 'bath'}  </span>
           </div>
 
           <div>

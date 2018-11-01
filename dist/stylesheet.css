@@ -1,0 +1,52 @@
+.listing-det-type {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    letter-spacing: normal !important;
+    font-weight: 900 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-transform: uppercase; 
+    color: rgb(83, 18, 16); 
+}
+
+.listing-det-title {
+    font-size: 28px !important;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(72, 72, 72);
+}
+
+.listing-det-city {
+    font-size: 18px;
+    margin: 0px 0px 30px 0px;
+    padding: 0px 0px 0px 0px;
+    line-height: 22px;
+    color: rgb(72, 72, 72);
+    letter-spacing: normal;
+    font-weight: 300;
+}
+
+.listing-det-nums {
+    margin: 15px 0px 15px 0px;
+}
+
+.listing-det-nums > span {
+    margin-right: 16px;
+    margin-left: 4px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300 !important;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.listing-det-nums > i {
+    font-size: 12px;
+}
+
+.listing-det-host-img {
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+}
