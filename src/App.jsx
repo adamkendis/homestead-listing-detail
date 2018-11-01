@@ -15,7 +15,7 @@ class App extends React.Component {
 
   getListing() {
     $.ajax({
-      url: '/listing-details/7',
+      url: '/listing-details/8',
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
@@ -45,10 +45,10 @@ class App extends React.Component {
           </div>
 
           <div>
-            <span className='listing-det-numguests'>{listing.numGuests} guests  </span>
-            <span className='listing-det-numrooms'>{listing.numRooms} bedrooms  </span>
-            <span className='listing-det-numbeds'>{listing.numBeds} beds  </span>
-            <span className='listing-det-numbaths'>{listing.numBaths} baths  </span>
+            <span className='listing-det-numguests'><i class="fas fa-users"></i> {listing.numGuests} { listing.numGuests > 1 ? 'guests' : 'guest'}  </span>
+            <span className='listing-det-numrooms'><i class="fas fa-door-open"></i> {listing.numRooms} { listing.numRooms > 1 ? 'bedrooms' : 'bedroom'}  </span>
+            <span className='listing-det-numbeds'><i class="glyphicon glyphicon-bed"></i> {listing.numBeds} { listing.numBeds > 1 ? 'beds' : 'bed'}  </span>
+            <span className='listing-det-numbaths'><i class="fas fa-bath"></i> {listing.numBaths} { listing.numBaths > 1 ? 'baths' : 'bath'}  </span>
           </div>
 
           <div>
