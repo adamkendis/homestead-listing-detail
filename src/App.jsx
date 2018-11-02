@@ -1,4 +1,5 @@
 import React from 'react';
+import Amenities from './Amenities.jsx';
 const $ = require('jquery');
 
 class App extends React.Component {
@@ -18,7 +19,7 @@ class App extends React.Component {
 
   getListing() {
     $.ajax({
-      url: '/listing-details/4',
+      url: '/listing-details/25',
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
@@ -30,9 +31,13 @@ class App extends React.Component {
   }
 
   handleClickHideInfo() {
-    this.setState({
-      infoHidden: !this.state.infoHidden,
-    })
+    this.setState(function(prevState) {
+      return {infoHidden: !prevState.infoHidden}
+    });
+  }
+
+  handleClickAmenities() {
+
   }
 
   render() {
@@ -106,12 +111,7 @@ class App extends React.Component {
               <div className='contact-host'>Contact host</div>        
             </div>
 
-
-            <div className='amenities-wrapper'>
-              <h5>Amenities</h5>
-
-              <div className="show-amenities">Show all {listing.amenities.length} amenities</div>
-            </div>
+            <Amenities amenities={listing.amenities}/>
 
             <div style={{borderBottom: "1px solid black"}}>
               <h5>Sleeping Arrangements</h5>

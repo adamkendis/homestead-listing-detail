@@ -159,9 +159,17 @@
     font-weight: 500;
 }
 
+.show-amenities {
+    margin-bottom: 16px;
+}
+
 .hide-show-space {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     display: inline-block;
+}
+
+.contact-host {
+    margin-bottom: 16px;
 }
 
 .show-amenities:hover,
@@ -192,4 +200,34 @@
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color:  rgb(235, 235, 235);
+    color: rgb(72, 72, 72);
+}
+
+.amenities-wrapper > h5 {
+    margin-bottom: 16px;
+}
+
+.amenities-left-col > div, 
+.amenities-right-col > div {
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.amenities-left-col {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    /* padding-bottom: 20px;
+    padding-right: 10px; */
+}
+
+.amenities-right-col {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+}
+
+.am {
+    margin-right: 5px;
 }
