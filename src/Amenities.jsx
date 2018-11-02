@@ -9,7 +9,7 @@ class Amenities extends React.Component {
   render() {
     const am = this.props.amenities;
     const amenities = {
-      1: <div><i class='am fas fa-wifi'></i> <span>Wifi</span></div >,
+      1: <div><i class='am fas fa-wifi'></i> <span>Wifi</span></div>,
       2: <div><i class='am fas fa-tv'></i> <span>Cable TV</span></div>,
       3: <div><i class='am far fa-snowflake'></i> <span>Air conditioning</span></div>,
       4: <div><i class='am fas fa-parking'></i> <span>Free parking</span></div>,
@@ -33,7 +33,18 @@ class Amenities extends React.Component {
           {amenities[am[4]]}
           {amenities[am[6]]}
         </div>
-        <div className='show-amenities'>Show all {this.props.amenities.length} amenities</div>
+
+        <div id="popup1" class="amenities-overlay">
+          <div class="amenities-popup">
+            <h2>Here i am</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              Thank to pop me out of that button, but now i'm done so you can close this window.
+            </div>
+          </div>
+        </div>
+
+        <a className='show-amenities' href='#popup1'>Show all {this.props.amenities.length} amenities</a>
       </section>
     )
   }

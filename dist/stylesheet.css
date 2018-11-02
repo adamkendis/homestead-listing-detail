@@ -159,8 +159,11 @@
     font-weight: 500;
 }
 
-.show-amenities {
+a.show-amenities {
     margin-bottom: 16px;
+    border: none;
+    text-align: left;
+    align-items: left;
 }
 
 .hide-show-space {
@@ -177,6 +180,7 @@
 .hide-show-space:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: rgb(0, 132, 137);
 }
 
 .up-caret {
@@ -204,6 +208,7 @@
 }
 
 .amenities-wrapper > h5 {
+    margin-top: 16px;
     margin-bottom: 16px;
 }
 
@@ -218,8 +223,6 @@
     display: inline-block;
     position: relative;
     width: 50%;
-    /* padding-bottom: 20px;
-    padding-right: 10px; */
 }
 
 .amenities-right-col {
@@ -231,3 +234,63 @@
 .am {
     margin-right: 5px;
 }
+
+.amenities-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(226, 226, 226, 0.600);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.amenities-overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .amenities-popup {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 2px;
+    width: 50%;
+    position: relative;
+    transition: all 2s ease-in-out;
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+
+  .amenities-popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+
+  .amenities-popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .amenities-popup .close:hover {
+    color: #06D85F;
+  }
+
+  .amenities-popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
