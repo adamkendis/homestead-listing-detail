@@ -10,7 +10,6 @@
     line-height: 16px !important;
     letter-spacing: normal !important;
     font-weight: 900 !important;
-    /* font-family: 'Helvetica Neue', sans-serif; */
     text-transform: uppercase; 
     color: rgb(83, 18, 16); 
 }
@@ -18,7 +17,6 @@
 .listing-det-title {
     font-size: 28px !important;
     font-weight: 600;
-    /* font-family: 'Helvetica Neue', sans-serif; */
     margin: 0px 0px 5px 0px;
     padding: 0px 0px 0px 0px;
     color: rgb(72, 72, 72);
@@ -61,7 +59,6 @@
     margin-right: 16px;
     margin-left: 4px;
     font-size: 16px;
-    /* font-family: 'Helvetica Neue', sans-serif; */
     font-weight: 300 !important;
     line-height: 22px;
     font-weight: 400;
@@ -89,8 +86,9 @@
 }
 
 .listing-det-highlights-container {
-    border: 1px solid black;
+    border: 1px solid;
     padding: 15px;
+    margin-bottom: 20px;
     border-radius: 4px;
     border-color: rgb(235, 235, 235);
     line-height: 20px;
@@ -108,7 +106,7 @@
     height: 15px; 
     width: 15px; 
     display: inline-block; 
-    fill: currentcolor;
+    fill: currentColor;
 }
 
 .highlights-helpful-container {
@@ -125,12 +123,73 @@
 }
 
 .listing-det-highlights {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
 }
 
 .highlights-helpful:hover svg path,
-.highlights-helpful:hover {
+.highlights-helpful:hover,
+.highlights-not-helpful:hover {
     fill: rgb(0, 132, 137) !important;
     color: rgb(0, 132, 137);
+    cursor: pointer;
+}
+
+.listing-det-lede {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(72, 72, 72);
+    margin-bottom: 20px;
+}
+
+.main-info-wrapper {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: rgb(72, 72, 72);
+}
+
+.main-info-wrapper > * {
+    margin: 15px 0px 15px 0px;
+}
+
+.show-amenities,
+.hide-info-host-contact-wrapper {
+    color: rgb(0, 132, 137);
+    font-weight: 500;
+}
+
+.hide-show-space {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.show-amenities:hover,
+.contact-host:hover,
+.hide-show-space:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.up-caret {
+    margin-left: 6px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    fill: currentColor;
+}
+
+.down-caret {    
+    margin-left: 6px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    fill: currentColor;
+    transform: rotate(180deg);
+}
+
+.amenities-wrapper {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color:  rgb(235, 235, 235);
 }
