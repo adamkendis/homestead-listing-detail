@@ -18,8 +18,9 @@ exports.up = function(knex, Promise) {
       table.text('guestAccess');
       table.text('guestInter');
       table.text('otherNotes');
+      table.specificType('coreAmenities', 'INT[]');
       table.specificType('amenities', 'INT[]');
-    })
+    });
   ]);
 };
 
