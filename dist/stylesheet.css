@@ -1,0 +1,136 @@
+.module-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 650px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.listing-det-type {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    letter-spacing: normal !important;
+    font-weight: 900 !important;
+    /* font-family: 'Helvetica Neue', sans-serif; */
+    text-transform: uppercase; 
+    color: rgb(83, 18, 16); 
+}
+
+.listing-det-title {
+    font-size: 28px !important;
+    font-weight: 600;
+    /* font-family: 'Helvetica Neue', sans-serif; */
+    margin: 0px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(72, 72, 72);
+}
+
+.listing-det-city {
+    font-size: 18px;
+    margin: 0px 0px 30px 0px;
+    padding: 0px 0px 0px 0px;
+    line-height: 22px;
+    color: rgb(72, 72, 72);
+    letter-spacing: normal;
+    font-weight: 300;
+}
+
+.listing-det-top-container {
+    position: relative;
+    width: 600px;
+}
+
+.listing-det-top-wrapper1 {
+    display: inline-block;
+    position: relative;
+    width: 83.33333333333334%;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+.listing-det-top-wrapper2 {
+    display: inline-block;
+    position: relative;
+    width: 16.666666666666664%;
+}
+
+.listing-det-nums {
+    margin: 0px 0px 15px 0px;
+}
+
+.listing-det-nums > span {
+    margin-right: 16px;
+    margin-left: 4px;
+    font-size: 16px;
+    /* font-family: 'Helvetica Neue', sans-serif; */
+    font-weight: 300 !important;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.listing-det-nums > i {
+    font-size: 12px;
+}
+
+.listing-det-host-img {
+    display: block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.listing-det-host-name {
+    color: rgb(118, 118, 118);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    text-align: center;
+}
+
+.listing-det-highlights-container {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 4px;
+    border-color: rgb(235, 235, 235);
+    line-height: 20px;
+}
+
+.home-highlights-title {
+    color: rgb(118, 118, 118);
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.thumbs-up {
+    height: 15px; 
+    width: 15px; 
+    display: inline-block; 
+    fill: currentcolor;
+}
+
+.highlights-helpful-container {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 200;
+    color: rgb(118, 118, 118);
+}
+
+.highlight-type {
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(72, 72, 72);
+}
+
+.listing-det-highlights {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.highlights-helpful:hover svg path,
+.highlights-helpful:hover {
+    fill: rgb(0, 132, 137) !important;
+    color: rgb(0, 132, 137);
+}

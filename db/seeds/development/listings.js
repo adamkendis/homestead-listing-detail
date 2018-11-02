@@ -14,7 +14,7 @@ faker.random.array = function randomNumsArray() {
 const createRecord = (knex, id) => {
   return knex('listings').insert({
     id,
-    type: faker.lorem.sentence(),
+    type: faker.lorem.word().toUpperCase(),
     title: faker.lorem.sentence(),
     city: faker.address.city(),
     numGuests: faker.random.number({ min: 1, max: 4 }),
