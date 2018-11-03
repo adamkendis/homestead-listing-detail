@@ -19,7 +19,7 @@ class App extends React.Component {
 
   getListing() {
     $.ajax({
-      url: '/listing-details/30',
+      url: '/listing-details/31',
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
