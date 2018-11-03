@@ -20,7 +20,7 @@ exports.up = function(knex, Promise) {
       table.text('otherNotes');
       table.specificType('coreAmenities', 'INT[]');
       table.specificType('amenities', 'INT[]');
-    });
+    })
   ]);
 };
 

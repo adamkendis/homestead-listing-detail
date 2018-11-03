@@ -1,7 +1,7 @@
 .module-wrapper {
     padding-left: 20px;
     padding-right: 20px;
-    width: 650px;
+    width: 75%;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -34,7 +34,7 @@
 
 .listing-det-top-container {
     position: relative;
-    width: 600px;
+    width: 100%;
 }
 
 .listing-det-top-wrapper1 {
@@ -74,7 +74,7 @@
     height: 55px;
     width: 55px;
     margin-left: 20px;
-    margin-right: auto;
+    margin-right: 20px;
 }
 
 .listing-det-host-name {
@@ -82,7 +82,8 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 18px;
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .listing-det-highlights-container {
@@ -130,7 +131,6 @@
 .highlights-helpful:hover svg path,
 .highlights-helpful:hover,
 .highlights-not-helpful:hover {
-    fill: rgb(0, 132, 137) !important;
     color: rgb(0, 132, 137);
     cursor: pointer;
 }
@@ -159,9 +159,20 @@
     font-weight: 500;
 }
 
+a.show-amenities {
+    margin-bottom: 16px;
+    border: none;
+    text-align: left;
+    align-items: left;
+}
+
 .hide-show-space {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     display: inline-block;
+}
+
+.contact-host {
+    margin-bottom: 16px;
 }
 
 .show-amenities:hover,
@@ -169,6 +180,7 @@
 .hide-show-space:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: rgb(0, 132, 137);
 }
 
 .up-caret {
@@ -192,4 +204,118 @@
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color:  rgb(235, 235, 235);
+    color: rgb(72, 72, 72);
+    padding-bottom: 16px;
 }
+
+.amenities-wrapper > h5 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.amenities-left-col > div, 
+.amenities-right-col > div {
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.amenities-left-col {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+}
+
+.amenities-right-col {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+}
+
+.am {
+    margin-right: 5px;
+}
+
+.amenities-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(219, 219, 219, 0.6);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+.amenities-overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .amenities-popup {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 2px;
+    width: 500px;
+    position: relative;
+    transition: all 2s ease-in-out;
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+
+  .amenities-popup h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: rgb(72, 72, 72);
+  }
+
+  .amenities-popup .amenities-close {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+
+  .amenities-popup .close:hover {
+    cursor: pointer;
+  }
+
+  .amenities-popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .amenities-category {
+    color: rgb(72, 72, 72);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .amenity {
+    font-weight: 300;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: rgb(235, 235, 235);
+  }
