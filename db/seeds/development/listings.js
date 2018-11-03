@@ -17,9 +17,7 @@ faker.random.core = function randomCoreAmenities() {
 faker.random.amenities = function randomAmenities() {
   const amenities = [];
 
-  const randomMinMax = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+  const randomMinMax = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
   // random number of basic amenities between 4 and 8
   const basicRand = randomMinMax(4, 8);

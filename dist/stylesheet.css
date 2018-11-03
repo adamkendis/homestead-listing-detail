@@ -1,7 +1,7 @@
 .module-wrapper {
     padding-left: 20px;
     padding-right: 20px;
-    width: 650px;
+    width: 75%;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -34,7 +34,7 @@
 
 .listing-det-top-container {
     position: relative;
-    width: 600px;
+    width: 75%;
 }
 
 .listing-det-top-wrapper1 {
@@ -49,6 +49,7 @@
     display: inline-block;
     position: relative;
     width: 16.666666666666664%;
+    align-content: left;
 }
 
 .listing-det-nums {
@@ -74,7 +75,8 @@
     height: 55px;
     width: 55px;
     margin-left: 20px;
-    margin-right: auto;
+    margin-right: 20px;
+    align-content: center;
 }
 
 .listing-det-host-name {
@@ -210,6 +212,7 @@ a.show-amenities {
 .amenities-wrapper > h5 {
     margin-top: 16px;
     margin-bottom: 16px;
+    padding-bottom: 16px;
 }
 
 .amenities-left-col > div, 
@@ -245,6 +248,7 @@ a.show-amenities {
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    overflow-y: auto;
 }
 
 .amenities-overlay:target {
@@ -253,11 +257,12 @@ a.show-amenities {
   }
 
   .amenities-popup {
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
     border-radius: 2px;
-    width: 50%;
+    width: 500px;
     position: relative;
     transition: all 2s ease-in-out;
     border: 1px solid rgba(224, 224, 224, 0.3);
@@ -270,27 +275,49 @@ a.show-amenities {
   }
 
   .amenities-popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: rgb(72, 72, 72);
   }
 
-  .amenities-popup .close {
+  .amenities-popup .amenities-close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 10px;
+    left: 20px;
     transition: all 200ms;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: lighter;
     text-decoration: none;
-    color: #333;
+    color: rgb(0, 0, 0);
   }
 
   .amenities-popup .close:hover {
-    color: #06D85F;
+    cursor: pointer;
   }
 
   .amenities-popup .content {
     max-height: 30%;
     overflow: auto;
+  }
+
+  .amenities-category {
+    color: rgb(72, 72, 72);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .amenity {
+    font-weight: 300;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: rgb(235, 235, 235);
   }

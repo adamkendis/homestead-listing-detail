@@ -19,7 +19,7 @@ class App extends React.Component {
 
   getListing() {
     $.ajax({
-      url: '/listing-details/25',
+      url: '/listing-details/30',
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
@@ -111,14 +111,7 @@ class App extends React.Component {
               <div className='contact-host'>Contact host</div>        
             </div>
 
-            <Amenities amenities={listing.amenities}/>
-
-            <div style={{borderBottom: "1px solid black"}}>
-              <h5>Sleeping Arrangements</h5>
-
-              <div><bold>Bedroom 1</bold></div>
-              <div>1 queen bed</div>
-            </div>
+            <Amenities amenities={listing.amenities} coreAmenities={listing.coreAmenities}/>
 
           </div>
         </div>
