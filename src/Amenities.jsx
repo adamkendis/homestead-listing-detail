@@ -4,15 +4,15 @@ const Amenities = (props) => {
 
   const am = props.coreAmenities;
   const coreAmenities = {
-    1: <div><i class='am fas fa-wifi'></i> <span>Wifi</span></div>,
-    2: <div><i class='am fas fa-tv'></i> <span>Cable TV</span></div>,
-    3: <div><i class='am far fa-snowflake'></i> <span>Air conditioning</span></div>,
-    4: <div><i class='am fas fa-parking'></i> <span>Free parking on premises</span></div>,
-    5: <div><i class='am fas fa-utensils'></i> <span>Kitchen</span></div>,
-    6: <div><i class='am fas fa-laptop'></i> <span>Laptop friendly workspace</span></div>,
-    7: <div><i class='am fas fa-swimming-pool'></i> <span>Pool</span></div>,
-    8: <div><i class='am fas fa-hot-tub'></i> <span>Hot tub</span></div>,
-    9: <div><i class='am fas fa-coffee'></i> <span>Breakfast</span></div>,
+    1: <div><i className='am fas fa-wifi'></i> <span>Wifi</span></div>,
+    2: <div><i className='am fas fa-tv'></i> <span>Cable TV</span></div>,
+    3: <div><i className='am far fa-snowflake'></i> <span>Air conditioning</span></div>,
+    4: <div><i className='am fas fa-parking'></i> <span>Free parking on premises</span></div>,
+    5: <div><i className='am fas fa-utensils'></i> <span>Kitchen</span></div>,
+    6: <div><i className='am fas fa-laptop'></i> <span>Laptop friendly workspace</span></div>,
+    7: <div><i className='am fas fa-swimming-pool'></i> <span>Pool</span></div>,
+    8: <div><i className='am fas fa-hot-tub'></i> <span>Hot tub</span></div>,
+    9: <div><i className='am fas fa-coffee'></i> <span>Breakfast</span></div>,
   };
   const amenities = {
     1: "Wifi",
@@ -59,18 +59,18 @@ const Amenities = (props) => {
         {coreAmenities[am[4]]}
         {coreAmenities[am[5]]}
       </div>
-      <div id="popup1" class="amenities-overlay">
-        <div class="amenities-popup">
+      <div id="popup1" className="amenities-overlay">
+        <div className="amenities-popup">
           <div className='popup-close-wrapper'>
-            <a class="amenities-close" href="#">&times;</a>    
+            <a className="amenities-close" href="#">&times;</a>    
           </div>
           <h2>Amenities</h2>
-          <div class="amenities-content">
+          <div className="amenities-content">
             <section className='basic-amenities-container'>
               <div className='amenities-category'>Basic</div>
               {props.amenities.map(amenity => {
                 if (amenity < 9) {
-                  return <div className='amenity'>{amenities[amenity]}</div>
+                  return <div className='amenity' key={amenity}>{amenities[amenity]}</div>
                 }
               })}
             </section>
@@ -78,7 +78,7 @@ const Amenities = (props) => {
               <div className='amenities-category'>Facilities</div>
               {props.amenities.map(amenity => {
                 if (amenity > 8 && amenity < 13) {
-                  return <div className='amenity'>{amenities[amenity]}</div>
+                  return <div className='amenity' key={amenity}>{amenities[amenity]}</div>
                 }
               })}
             </section>
@@ -86,7 +86,7 @@ const Amenities = (props) => {
               <div className='amenities-category'>Dining</div>
               {props.amenities.map(amenity => {
                 if (amenity > 12 && amenity < 19) {
-                  return <div className='amenity'>{amenities[amenity]}</div>
+                  return <div className='amenity' key={amenity}>{amenities[amenity]}</div>
                 }
               })}
             </section>
@@ -94,7 +94,7 @@ const Amenities = (props) => {
               <div className='amenities-category'>Logistics</div>
               {props.amenities.map(amenity => {
                 if (amenity > 18 && amenity < 21) {
-                  return <div className='amenity'>{amenities[amenity]}</div>
+                  return <div className='amenity' key={amenity}>{amenities[amenity]}</div>
                 }
               })}
             </section>
@@ -102,7 +102,7 @@ const Amenities = (props) => {
               <div className='amenities-category'>Bed and bath</div>
               {props.amenities.map(amenity => {
                 if (amenity > 20 && amenity < 26) {
-                  return <div className='amenity'>{amenities[amenity]}</div>
+                  return <div className='amenity' key={amenity}>{amenities[amenity]}</div>
                 }
               })}
             </section>
@@ -110,7 +110,7 @@ const Amenities = (props) => {
               <div className='amenities-category'>Safety</div>
               {props.amenities.map(amenity => {
                 if (amenity > 25) {
-                  return <div className='amenity'>{amenities[amenity]}</div>
+                  return <div className='amenity' key={amenity}>{amenities[amenity]}</div>
                 }
               })}
             </section>
