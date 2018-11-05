@@ -36,10 +36,6 @@ class App extends React.Component {
     });
   }
 
-  handleClickAmenities() {
-
-  }
-
   render() {
     if (this.state.listing) {
       const listing = this.state.listing;
@@ -58,10 +54,10 @@ class App extends React.Component {
           </div>
 
           <div className='listing-det-nums'>
-            <i class="fas fa-users"></i><span className='listing-det-numguests'> {listing.numGuests} { listing.numGuests > 1 ? 'guests' : 'guest'}  </span>
-            <i class="fas fa-door-open"></i><span className='listing-det-numrooms'> {listing.numRooms} { listing.numRooms > 1 ? 'bedrooms' : 'bedroom'}  </span>
-            <i class="glyphicon glyphicon-bed"></i><span className='listing-det-numbeds'> {listing.numBeds} { listing.numBeds > 1 ? 'beds' : 'bed'}  </span>
-            <i class="fas fa-bath"></i><span className='listing-det-numbaths'> {listing.numBaths} { listing.numBaths > 1 ? 'baths' : 'bath'}  </span>
+            <i className="fas fa-users"></i><span className='listing-det-numguests'> {listing.numGuests} { listing.numGuests > 1 ? 'guests' : 'guest'}  </span>
+            <i className="fas fa-door-open"></i><span className='listing-det-numrooms'> {listing.numRooms} { listing.numRooms > 1 ? 'bedrooms' : 'bedroom'}  </span>
+            <i className="glyphicon glyphicon-bed"></i><span className='listing-det-numbeds'> {listing.numBeds} { listing.numBeds > 1 ? 'beds' : 'bed'}  </span>
+            <i className="fas fa-bath"></i><span className='listing-det-numbaths'> {listing.numBaths} { listing.numBaths > 1 ? 'baths' : 'bath'}  </span>
           </div>
 
           <div>
@@ -105,8 +101,8 @@ class App extends React.Component {
                   "Hide" }
               </div>
                 { this.state.infoHidden ? 
-                <svg className='up-caret' viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" ><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fill-rule="evenodd"></path></svg> :
-                <svg className='down-caret' viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" ><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fill-rule="evenodd"></path></svg>
+                <svg className='up-caret' viewBox="0 0 18 18" role="presentation" ><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" ></path></svg> :
+                <svg className='down-caret' viewBox="0 0 18 18" role="presentation" ><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" ></path></svg>
                 }
               <div className='contact-host'>Contact host</div>        
             </div>
