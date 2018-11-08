@@ -66,7 +66,8 @@ class App extends React.Component {
 
           <div>
 
-            <HighlightsContainer highlights={listing.highlights}/>
+            <HighlightsContainer highlights={listing.highlights} hostName={listing.hostName}/>
+            
             <div className='listing-det-lede'>{listing.lede}</div>
 
             { this.state.infoHidden ? 
