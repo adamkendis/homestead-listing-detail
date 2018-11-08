@@ -18,8 +18,10 @@ class App extends React.Component {
   }
 
   getListing() {
+    const random = Math.floor(Math.random() * 101)
+    const listingId = Number(window.location.pathname.replace(/\//, '')) || random;
     $.ajax({
-      url: '/listing-details/31',
+      url: `http://localhost:3002/listing/${listingId}`,
       type: 'GET',
       contentType: 'application/json',
       success: (listing) => {
