@@ -20,7 +20,7 @@ class Highlight extends React.Component {
     const highlights = {
       1: {
         type: "Great location",
-        text: "95% of recent guests gave this home's location a t-star rating."
+        text: "95% of recent guests gave this home's location a 5-star rating."
       },
       2: {
         type: "Great check-in experience",
