@@ -62,7 +62,7 @@ const Amenities = (props) => {
       <div id="popup1" className="amenities-overlay">
         <div className="amenities-popup">
           <div className='popup-close-wrapper'>
-            <a className="amenities-close" href="#">&times;</a>    
+            <a className="amenities-close" href="#amenities-close">&times;</a>    
           </div>
           <h2>Amenities</h2>
           <div className="amenities-content">

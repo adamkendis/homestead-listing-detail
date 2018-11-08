@@ -1,5 +1,7 @@
 const faker = require('faker');
 
+const randomMinMax = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 faker.random.core = function randomCoreAmenities() {
   const amenities = [];
 
@@ -16,8 +18,6 @@ faker.random.core = function randomCoreAmenities() {
 
 faker.random.amenities = function randomAmenities() {
   const amenities = [];
-
-  const randomMinMax = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
   // random number of basic amenities between 4 and 8
   const basicRand = randomMinMax(4, 8);
@@ -86,6 +86,67 @@ faker.random.amenities = function randomAmenities() {
   return amenities.sort((a, b) => a - b);
 };
 
+faker.random.highlights = function fakerHighlights() {
+  const highlights = [];
+  const numHighlights = randomMinMax(1, 3);
+  for (let i = 0; i < numHighlights; i += 1) {
+    const rand = Math.floor(Math.random() * 5) + 1;
+    if (highlights.includes(rand)) {
+      i -= 1;
+    } else {
+      highlights.push(rand);
+    }
+  }
+  return highlights;
+};
+
+const hostImages = [
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/achievement-adult-business-937481.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adolescent-adult-business-1036627.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-apparel-art-795970.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-art-beard-1089038.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-art-camera-381843.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-background-beard-716658.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-beach-beard-736716.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-beard-blur-713520.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-beard-boy-220453.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-beard-boy-903661.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-beard-close-up-1008973.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-black-background-businessman-262391.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-blur-city-936043.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-bokeh-daylight-1182238.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-candid-cool-45882.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-close-up-eyeglasses-997512.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/adult-confidence-elderly-man-1139743.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/age-angry-elderly-6110.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/artist-elderly-glasses-25758.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/beard-male-man-35065.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/black-and-white-fun-happy-91227.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/bokeh-man-person-905470.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/boy-bright-close-up-792326.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/m/face-facial-hair-fine-looking-614810.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adolescent-adult-beautiful-726162.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-attractive-beautiful-1005399.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-attractive-beautiful-415829.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-attractive-beautiful-871495.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-autumn-autumnal-712413.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-beautiful-brunette-1384956.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-beautiful-casual-372042.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-beautiful-close-up-773371.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-beauty-blur-598745.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/adult-elder-elderly-432722.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/angry-beauty-blur-206481.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/attractive-beautiful-casual-1197132.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/beautiful-beauty-black-and-white-157661.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/beautiful-beauty-brazilian-woman-1102341.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/beautiful-beauty-casual-762020.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/beautiful-blur-bokeh-573305.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/beautiful-brunette-cute-774909.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/beautiful-brunette-female-70354.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/crazy-cute-eyes-4636.jpg',
+  'https://s3-us-west-1.amazonaws.com/hs-ld-host-imgs/f/fashion-female-girl-69494.jpg',
+];
+
 const createRecord = (knex, id) => {
   return knex('listings').insert({
     id,
@@ -96,9 +157,9 @@ const createRecord = (knex, id) => {
     numRooms: faker.random.number({ min: 1, max: 4 }),
     numBeds: faker.random.number({ min: 1, max: 4 }),
     numBaths: faker.random.number({ min: 1, max: 2 }),
-    hostImg: faker.image.imageUrl(),
-    hostName: faker.name.findName(),
-    highlights: faker.lorem.paragraph(),
+    hostImg: hostImages[randomMinMax(0, hostImages.length - 1)],
+    hostName: faker.fake('{{name.firstName}}'),
+    highlights: faker.random.highlights(),
     lede: faker.lorem.paragraph(),
     space: faker.lorem.paragraph(),
     guestAccess: faker.lorem.sentence(),
@@ -116,7 +177,7 @@ exports.seed = function (knex, Promise) {
       // Inserts seed entries
       const rows = [];
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 101; i++) {
         rows.push(createRecord(knex, i))
       }
 

@@ -1,4 +1,3 @@
-
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('listings', (table) => {
@@ -12,7 +11,7 @@ exports.up = function(knex, Promise) {
       table.integer('numBaths');
       table.text('hostImg');
       table.text('hostName');
-      table.text('highlights');
+      table.specificType('highlights', 'INT[]');
       table.text('lede');
       table.text('space');
       table.text('guestAccess');
@@ -20,7 +19,7 @@ exports.up = function(knex, Promise) {
       table.text('otherNotes');
       table.specificType('coreAmenities', 'INT[]');
       table.specificType('amenities', 'INT[]');
-    })
+    }),
   ]);
 };
 

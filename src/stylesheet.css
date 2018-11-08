@@ -1,21 +1,21 @@
 .module-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 3em;
+    margin-left: 3em;
     width: 75%;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
 .listing-det-type {
-    font-size: 12px !important;
-    line-height: 16px !important;
-    letter-spacing: normal !important;
-    font-weight: 900 !important;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 900;
     text-transform: uppercase; 
     color: rgb(83, 18, 16); 
 }
 
 .listing-det-title {
-    font-size: 28px !important;
+    font-size: 28px;
     font-weight: 600;
     margin: 0px 0px 5px 0px;
     padding: 0px 0px 0px 0px;
@@ -73,8 +73,9 @@
     border-radius: 50%;
     height: 55px;
     width: 55px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 60px;
 }
 
 .listing-det-host-name {
@@ -82,23 +83,23 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 18px;
-    text-align: left;
-    margin-left: 20px;
+    text-align: center;
 }
 
 .listing-det-highlights-container {
     border: 1px solid;
-    padding: 15px;
+    padding: 20px 20px 5px 20px;
     margin-bottom: 20px;
     border-radius: 4px;
     border-color: rgb(235, 235, 235);
-    line-height: 20px;
+    line-height: 21px;
 }
 
 .home-highlights-title {
     color: rgb(118, 118, 118);
     font-size: 12px;
     margin-bottom: 10px;
+    margin-top: 0px;
     line-height: 22px;
     font-weight: 500;
 }
@@ -111,7 +112,8 @@
 }
 
 .highlights-helpful-container {
-    margin-top: 10px;
+    margin-top: 4px;
+    margin-bottom: 10px;
     font-size: 12px;
     font-weight: 200;
     color: rgb(118, 118, 118);
@@ -119,12 +121,12 @@
 
 .highlight-type {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     color: rgb(72, 72, 72);
 }
 
 .listing-det-highlights {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -136,14 +138,14 @@
 }
 
 .listing-det-lede {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: rgb(72, 72, 72);
     margin-bottom: 20px;
 }
 
 .main-info-wrapper {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     margin-bottom: 20px;
     color: rgb(72, 72, 72);
@@ -156,7 +158,7 @@
 .show-amenities,
 .hide-info-host-contact-wrapper {
     color: rgb(0, 132, 137);
-    font-weight: 500;
+    font-size: 16px;
 }
 
 a.show-amenities {
@@ -168,11 +170,13 @@ a.show-amenities {
 
 .hide-show-space {
     margin-bottom: 16px;
+    font-size: 16px;
     display: inline-block;
 }
 
 .contact-host {
     margin-bottom: 16px;
+    font-size: 16px;
 }
 
 .show-amenities:hover,
@@ -217,15 +221,10 @@ a.show-amenities {
 .amenities-right-col > div {
     margin-bottom: 16px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.amenities-left-col {
-    display: inline-block;
-    position: relative;
-    width: 50%;
-}
-
+.amenities-left-col,
 .amenities-right-col {
     display: inline-block;
     position: relative;
