@@ -1,21 +1,21 @@
 .module-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 3em;
+    margin-left: 3em;
     width: 75%;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
 .listing-det-type {
-    font-size: 12px !important;
-    line-height: 16px !important;
-    letter-spacing: normal !important;
-    font-weight: 900 !important;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 900;
     text-transform: uppercase; 
     color: rgb(83, 18, 16); 
 }
 
 .listing-det-title {
-    font-size: 28px !important;
+    font-size: 28px;
     font-weight: 600;
     margin: 0px 0px 5px 0px;
     padding: 0px 0px 0px 0px;
@@ -119,12 +119,12 @@
 
 .highlight-type {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     color: rgb(72, 72, 72);
 }
 
 .listing-det-highlights {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -136,14 +136,14 @@
 }
 
 .listing-det-lede {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: rgb(72, 72, 72);
     margin-bottom: 20px;
 }
 
 .main-info-wrapper {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     margin-bottom: 20px;
     color: rgb(72, 72, 72);
@@ -156,7 +156,7 @@
 .show-amenities,
 .hide-info-host-contact-wrapper {
     color: rgb(0, 132, 137);
-    font-weight: 500;
+    font-size: 16px;
 }
 
 a.show-amenities {
@@ -168,11 +168,13 @@ a.show-amenities {
 
 .hide-show-space {
     margin-bottom: 16px;
+    font-size: 16px;
     display: inline-block;
 }
 
 .contact-host {
     margin-bottom: 16px;
+    font-size: 16px;
 }
 
 .show-amenities:hover,
@@ -217,15 +219,10 @@ a.show-amenities {
 .amenities-right-col > div {
     margin-bottom: 16px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.amenities-left-col {
-    display: inline-block;
-    position: relative;
-    width: 50%;
-}
-
+.amenities-left-col,
 .amenities-right-col {
     display: inline-block;
     position: relative;

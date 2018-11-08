@@ -116,7 +116,7 @@ exports.seed = function (knex, Promise) {
       // Inserts seed entries
       const rows = [];
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 101; i++) {
         rows.push(createRecord(knex, i))
       }
 
