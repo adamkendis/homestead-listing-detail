@@ -2,13 +2,13 @@
   "name": "listing-detail-service",
   "version": "1.0.0",
   "description": "Listing details module for Homestead web app",
-  "author": "Adam Kendis (https://github.com/adamkendis",
+  "author": "Adam Kendis (https://github.com/adamkendis)",
   "license": "MIT",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js --watch",
+    "start": "node server/index.js",
     "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "wp-build": "webpack --watch",
     "seed": "knex migrate:latest && knex seed:run",
