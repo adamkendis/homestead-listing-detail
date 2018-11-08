@@ -1,5 +1,6 @@
 import React from 'react';
 import Amenities from './Amenities.jsx';
+import './stylesheet.css';
 const $ = require('jquery');
 
 class App extends React.Component {
