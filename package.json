@@ -1,9 +1,9 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "Adam Kendis",
-  "license": "",
+  "name": "listing-detail-service",
+  "version": "1.0.0",
+  "description": "Listing details module for Homestead web app",
+  "author": "Adam Kendis (https://github.com/adamkendis",
+  "license": "MIT",
   "engines": {
     "node": ">=6.13.0"
   },
