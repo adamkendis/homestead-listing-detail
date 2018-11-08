@@ -7,7 +7,7 @@ const config = require('../knexfile.js')[environment];
 const knex = require('knex')(config);
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 app.use(express.static('dist'));
 app.use(bodyParser.json());
