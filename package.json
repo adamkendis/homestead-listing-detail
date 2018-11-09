@@ -12,7 +12,8 @@
     "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "wp-build": "webpack --watch",
     "seed": "knex migrate:latest && knex seed:run",
-    "test": "jest --watch --coverage --config ./test/jest.config.js"
+    "test": "jest --watch --coverage --config ./test/jest.config.js",
+    "prestart": "knex migrate:latest && knex seed:run"
   },
   "dependencies": {
     "express": "^4.16.4",
