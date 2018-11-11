@@ -109,6 +109,7 @@
     width: 15px; 
     display: inline-block; 
     fill: currentColor;
+    fill-rule: evenodd;
 }
 
 .highlights-helpful-container {
@@ -130,11 +131,19 @@
     font-weight: 300;
 }
 
-.highlights-helpful:hover svg path,
+.highlights-helpful:hover > svg path,
 .highlights-helpful:hover,
 .highlights-not-helpful:hover {
     color: rgb(0, 132, 137);
     cursor: pointer;
+    fill: rgb(0, 132, 137);
+}
+
+svg:hover,
+path:hover {
+    color: rgb(0, 132, 137);
+    cursor: pointer;
+    fill: rgb(0, 132, 137);
 }
 
 .listing-det-lede {
@@ -177,6 +186,8 @@ a.show-amenities {
 .contact-host {
     margin-bottom: 16px;
     font-size: 16px;
+    color: rgb(0, 132, 137);
+    display: block;
 }
 
 .show-amenities:hover,
@@ -282,8 +293,8 @@ a.show-amenities {
 
   .amenities-popup .amenities-close {
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 11px;
+    left: 26px;
     transition: all 200ms;
     font-size: 30px;
     font-weight: lighter;
@@ -291,7 +302,10 @@ a.show-amenities {
     color: rgb(0, 0, 0);
   }
 
-  .amenities-popup .close:hover {
+  .popup-close-wrapper:hover,
+  .amenities-close:hover,
+  .login-close:hover,
+  .login-popup-close-wrapper:hover {
     cursor: pointer;
   }
 
@@ -318,3 +332,203 @@ a.show-amenities {
     border-bottom: 1px solid;
     border-color: rgb(235, 235, 235);
   }
+
+  .popup-close-wrapper {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 100%;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+
+  /* 
+  ------------------ LOG IN POPUP -------------------
+  */
+
+  .login-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(39, 39, 39, 0.856);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+.login-overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .login-popup {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 2px;
+    width: 500px;
+    position: relative;
+    transition: all 2s ease-in-out;
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    top: 10%;
+  }
+
+  .login-popup .login-close {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+  }
+
+  .login-popup-close-wrapper {
+      display: block;
+      margin-bottom: 20px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgb(209, 209, 209);
+      border-radius: 100%;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      background-clip: padding-box;
+  }
+
+  .facebook-svg,
+  .email-svg {
+    fill: white;
+  }
+
+  .facebook-svg,
+  .google-svg,
+  .email-svg {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      fill-rule: evenodd;
+      margin-right: 10px;
+  }
+
+  .facebook-signup-div,
+  .google-signup-div {
+      margin-bottom: 7px;
+  }
+
+  .facebook-btn {
+      background-color: rgb(69, 104, 178);
+      color: white;
+      border: none;
+      border-radius: 2px;
+      width: 400px;
+      height: 40px; 
+  }
+
+  .google-btn {
+      background-color: white;
+      color: rgb(72, 72, 72);
+      border: 2px solid;
+      border-color: rgb(72, 72, 72);
+      border-radius: 2px;
+      width: 400px;
+      height: 40px; 
+  }
+
+  .email-btn {
+      background-color: rgb(255, 90, 95);
+      border: none;
+      border-radius: 2px;
+      color: white;
+      width: 400px;
+      height: 40px; 
+  }
+
+  .login-content, 
+  .email-signup-div,
+  .above-have-acct {
+    text-align: center;
+  }
+
+  .login-or-div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .login-or-span {
+      color: rgb(118, 118, 118);
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 20px;
+      vertical-align: middle;
+  }
+
+  .login-or-span::before,
+  .login-or-span::after {
+      display: inline-block;
+      content: "";
+      border-top: 1px solid rgb(228, 228, 228);
+      transform: translateY(-.5rem);
+      width: 180px;
+      margin: 0 1rem;
+  }
+
+  .email-signup-div {
+      margin-bottom: 20px;
+  }
+
+  .above-have-acct {
+      width: 500px;
+      margin-left: 25px;
+  }
+
+  .above-have-acct-brdr {
+      width: 400px;
+      border-top: 1px solid rgb(228, 228, 228);
+  }
+
+  .login-bottom {
+      margin-top: 15px;
+  }
+
+  .have-airbnb-acct {
+      margin-right: 5px;
+      font-size: 14px;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: rgb(72, 72, 72);
+      font-weight: 200;
+  }
+
+  .login-login {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .login-login:hover {
+      cursor: pointer;
+      text-decoration: underline;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
