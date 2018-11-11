@@ -88,7 +88,8 @@ class App extends React.Component {
               <div className='hide-show-space' onClick={() => this.handleClickHideInfo()}>
                 { this.state.infoHidden ? 
                   "Read more about the space" :
-                  "Hide" }
+                  "Hide" 
+                }
               </div>
                 { this.state.infoHidden ? 
                 <svg className='up-caret' viewBox="0 0 18 18" role="presentation" ><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" ></path></svg> :
@@ -133,7 +134,7 @@ class App extends React.Component {
                       <div className="above-have-acct-brdr"></div>
                     </div>
                     <div className="login-bottom">
-                      <span className="have-airbnb-acct">Already have an Airbnb account?</span>
+                      <span className="have-homestead-acct">Already have a Homestead account?</span>
                       <span className="login-login">Log in</span>
                     </div>
                   </div>

@@ -76,6 +76,7 @@
     margin-left: auto;
     margin-right: auto;
     min-width: 60px;
+    object-fit: cover;
 }
 
 .listing-det-host-name {
@@ -134,13 +135,6 @@
 .highlights-helpful:hover > svg path,
 .highlights-helpful:hover,
 .highlights-not-helpful:hover {
-    color: rgb(0, 132, 137);
-    cursor: pointer;
-    fill: rgb(0, 132, 137);
-}
-
-svg:hover,
-path:hover {
     color: rgb(0, 132, 137);
     cursor: pointer;
     fill: rgb(0, 132, 137);
@@ -510,7 +504,7 @@ a.show-amenities {
       margin-top: 15px;
   }
 
-  .have-airbnb-acct {
+  .have-homestead-acct {
       margin-right: 5px;
       font-size: 14px;
       font-family: 'Helvetica Neue', sans-serif;
